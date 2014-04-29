@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tiny Stack by avoidwork</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Tiny Stack</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/avoidwork/tiny-stack">View the Project on GitHub <small>avoidwork/tiny-stack</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/avoidwork/tiny-stack/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/avoidwork/tiny-stack/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/avoidwork/tiny-stack">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Stack micro library for the browser or server. When loaded as a script tag on the browser, Tiny Stack be available as 'stack()'.</p>
+
+<p><a href="http://travis-ci.org/avoidwork/tiny-stack"><img src="https://secure.travis-ci.org/avoidwork/tiny-stack.png" alt="build status"></a></p>
+
+<h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<h4>
+<a name="clear" class="anchor" href="#clear"><span class="octicon octicon-link"></span></a>clear</h4>
+
+<p>Clears the stack</p>
+
+<h4>
+<a name="length" class="anchor" href="#length"><span class="octicon octicon-link"></span></a>length</h4>
+
+<p>Gets the length/size of the stack</p>
+
+<h4>
+<a name="peek" class="anchor" href="#peek"><span class="octicon octicon-link"></span></a>peek</h4>
+
+<p>Gets the top item of the stack</p>
+
+<h4>
+<a name="pop" class="anchor" href="#pop"><span class="octicon octicon-link"></span></a>pop</h4>
+
+<p>Gets &amp; removes the top item of the stack</p>
+
+<h4>
+<a name="push" class="anchor" href="#push"><span class="octicon octicon-link"></span></a>push</h4>
+
+<p>Adds an item to the top the stack</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<pre><code>var stack   = require("tiny-stack"),
+    mystack = stack();
+
+
+mystack.length(); // 0
+mystack.push({name: "John Doe"});
+mystack.push({name: "Jane Doe"});
+mystack.length(); // 2
+mystack.peek(); // {name: "Jane Doe"}
+mystack.pop();
+mystack.length(); // 1
+mystack.peek(); // {name: "John Doe"}
+mystack.clear();
+mystack.length(); // 0
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/avoidwork">avoidwork</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
