@@ -34,6 +34,17 @@ TinyStack.prototype.length = function length () {
 };
 
 /**
+ * Tests if this stack is empty
+ *
+ * @method empty
+ * @memberOf TinyStack
+ * @return {Boolean} Stack is empty
+ */
+TinyStack.prototype.empty = function empty () {
+	return this.top === 0;
+};
+
+/**
  * Gets the item at the top of the stack
  *
  * @method peek
@@ -73,4 +84,22 @@ TinyStack.prototype.push = function push ( arg ) {
 	this.data[++this.top] = arg;
 
 	return this;
+};
+
+/**
+ * Returns the 1-based position where an object is on this stack
+ *
+ * If the object o occurs as an item in this stack, this method returns the
+ * distance from the top of the stack of the occurrence nearest the top of
+ * the stack; the topmost item on the stack is considered to be at distance 1.
+ * The equals method is used to compare o to the items in this stack.
+ *
+ * @method push
+ * @memberOf TinyStack
+ * @return {Number} 1-based position
+ */
+TinyStack.prototype.search = function search ( arg ) {
+	var index = this.data.indexOf(arg);
+
+	return index === -1 ? -1 : this.data.length - index;
 };
