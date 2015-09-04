@@ -41,5 +41,6 @@
     "stack",
     "tiny",
     "micro"
-  ]
+  ],
+  "license": "BSD-3-Clause"
 }
