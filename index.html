@@ -6,7 +6,7 @@
     <title>Tiny Stack by avoidwork</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,49 +28,68 @@
         </ul>
       </header>
       <section>
-        <p>Stack micro library for the browser or server. When loaded as a script tag on the browser, Tiny Stack be available as 'stack()'.</p>
+        <h1>
+<a id="tiny-stack" class="anchor" href="#tiny-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tiny Stack</h1>
+
+<p>Stack micro library for the browser or server. When loaded as a script tag on the browser, Tiny Stack be available as 'stack()'.</p>
 
 <p><a href="http://travis-ci.org/avoidwork/tiny-stack"><img src="https://secure.travis-ci.org/avoidwork/tiny-stack.png" alt="build status"></a></p>
 
 <h2>
-<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span class="octicon octicon-link"></span></a>API</h2>
 
 <h4>
-<a name="clear" class="anchor" href="#clear"><span class="octicon octicon-link"></span></a>clear</h4>
+<a id="clear" class="anchor" href="#clear" aria-hidden="true"><span class="octicon octicon-link"></span></a>clear</h4>
 
 <p>Clears the stack</p>
 
 <h4>
-<a name="length" class="anchor" href="#length"><span class="octicon octicon-link"></span></a>length</h4>
+<a id="length" class="anchor" href="#length" aria-hidden="true"><span class="octicon octicon-link"></span></a>length</h4>
 
 <p>Gets the length/size of the stack</p>
 
 <h4>
-<a name="peek" class="anchor" href="#peek"><span class="octicon octicon-link"></span></a>peek</h4>
+<a id="peek" class="anchor" href="#peek" aria-hidden="true"><span class="octicon octicon-link"></span></a>peek</h4>
 
 <p>Gets the top item of the stack</p>
 
 <h4>
-<a name="pop" class="anchor" href="#pop"><span class="octicon octicon-link"></span></a>pop</h4>
+<a id="pop" class="anchor" href="#pop" aria-hidden="true"><span class="octicon octicon-link"></span></a>pop</h4>
 
 <p>Gets &amp; removes the top item of the stack</p>
 
 <h4>
-<a name="push" class="anchor" href="#push"><span class="octicon octicon-link"></span></a>push</h4>
+<a id="push" class="anchor" href="#push" aria-hidden="true"><span class="octicon octicon-link"></span></a>push</h4>
 
 <p>Adds an item to the top the stack</p>
 
+<h4>
+<a id="empty" class="anchor" href="#empty" aria-hidden="true"><span class="octicon octicon-link"></span></a>empty</h4>
+
+<p>Tests if this stack is empty</p>
+
+<h4>
+<a id="search" class="anchor" href="#search" aria-hidden="true"><span class="octicon octicon-link"></span></a>search</h4>
+
+<p>Returns the 1-based position where an object is on this stack</p>
+
 <h2>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
 
 <pre><code>var stack   = require("tiny-stack"),
     mystack = stack();
 
-
+var jane = {name: "Jane Doe"};
+var john = {name: "John Doe"};
 mystack.length(); // 0
-mystack.push({name: "John Doe"});
-mystack.push({name: "Jane Doe"});
+mystack.empty(); // true
+mystack.push(john);
+mystack.push(jane);
 mystack.length(); // 2
+mystack.search(jane); // 1
+mystack.search(john); // 2
+mystack.search({}); // -1
+mystack.empty(); // false
 mystack.peek(); // {name: "Jane Doe"}
 mystack.pop();
 mystack.length(); // 1
