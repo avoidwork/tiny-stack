@@ -1,0 +1,27 @@
+{
+  "name": "tiny-stack",
+  "description": "Tiny stack for browser or server",
+  "main": "lib/tiny-stack",
+  "authors": [
+    "Jason Mulligan <jason.mulligan@avoidwork.com>"
+  ],
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "stack",
+    "tiny",
+    "micro"
+  ],
+  "homepage": "https://github.com/avoidwork/tiny-stack",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
