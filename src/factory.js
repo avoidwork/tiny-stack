@@ -1,9 +1,3 @@
-/**
- * TinyStack factory
- *
- * @method factory
- * @return {Object} {@link TinyStack}
- */
-function factory () {
-	return new TinyStack();
-}
+	function factory (...args) {
+		return new TinyStack(...args);
+	}

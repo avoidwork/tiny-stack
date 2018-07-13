@@ -1,6 +1,6 @@
 # Tiny Stack
 
-Stack micro library for the browser or server. When loaded as a script tag on the browser, Tiny Stack be available as 'stack()'.
+Stack for Client or Server.
 
 [![build status](https://secure.travis-ci.org/avoidwork/tiny-stack.png)](http://travis-ci.org/avoidwork/tiny-stack)
 
@@ -28,11 +28,11 @@ Returns the 1-based position where an object is on this stack
 
 ## Example
 ```
-var stack   = require("tiny-stack"),
-    mystack = stack();
+const stack = require("tiny-stack"),
+    mystack = stack(),
+    jane = {name: "Jane Doe"},
+    john = {name: "John Doe"};
 
-var jane = {name: "Jane Doe"};
-var john = {name: "John Doe"};
 mystack.length(); // 0
 mystack.empty(); // true
 mystack.push(john);

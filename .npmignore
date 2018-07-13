@@ -1,8 +1,11 @@
-/node_modules/
-/src/
-/test/
+node_modules/
+src/
+test/
+lib/tiny-stack.es6.*
+lib/tiny-stack.min.*
 .git
 .gitignore
-.jshintrc
+.eslintrc
 .travis.yml
+bower.json
 Gruntfile.js

@@ -1,6 +1,8 @@
-var stack = require("../lib/tiny-stack");
+"use strict";
 
-exports["clear"] = {
+const stack = require("../lib/tiny-stack");
+
+exports.clear = {
 	setUp: function (done) {
 		this.stack = stack();
 		done();
@@ -19,7 +21,7 @@ exports["clear"] = {
 	}
 };
 
-exports["pop"] = {
+exports.pop = {
 	setUp: function (done) {
 		this.stack = stack();
 		done();
@@ -35,7 +37,7 @@ exports["pop"] = {
 	}
 };
 
-exports["peek"] = {
+exports.peek = {
 	setUp: function (done) {
 		this.stack = stack();
 		done();
@@ -51,7 +53,7 @@ exports["peek"] = {
 	}
 };
 
-exports["search"] = {
+exports.search = {
 	setUp: function (done) {
 		this.stack = stack();
 		done();
@@ -59,19 +61,39 @@ exports["search"] = {
 	tests: function (test) {
 		test.expect(9);
 		test.strictEqual(this.stack.empty(), true, "Should be 'true'");
-		this.stack.push('a');
-		this.stack.push('b');
-		this.stack.push('c');
-		this.stack.push('d');
+		this.stack.push("a");
+		this.stack.push("b");
+		this.stack.push("c");
+		this.stack.push("d");
 		test.strictEqual(this.stack.length(), 4, "Should be '4'");
 		test.strictEqual(this.stack.empty(), false, "Should be 'false'");
-		test.strictEqual(this.stack.search('a'), 4, "Should be '4'");
-		test.strictEqual(this.stack.search('b'), 3, "Should be '3'");
-		test.strictEqual(this.stack.search('c'), 2, "Should be '2'");
-		test.strictEqual(this.stack.search('d'), 1, "Should be '1'");
-		test.strictEqual(this.stack.search('e'), -1, "Should be '-1'");
+		test.strictEqual(this.stack.search("a"), 4, "Should be '4'");
+		test.strictEqual(this.stack.search("b"), 3, "Should be '3'");
+		test.strictEqual(this.stack.search("c"), 2, "Should be '2'");
+		test.strictEqual(this.stack.search("d"), 1, "Should be '1'");
+		test.strictEqual(this.stack.search("e"), -1, "Should be '-1'");
 		this.stack.pop();
-		test.strictEqual(this.stack.search('c'), 1, "Should be '1'");
+		test.strictEqual(this.stack.search("c"), 1, "Should be '1'");
+		test.done();
+	}
+};
+
+exports.rest = {
+	setUp: function (done) {
+		this.stack = stack("a", "b", "c", "d");
+		done();
+	},
+	tests: function (test) {
+		test.expect(8);
+		test.strictEqual(this.stack.length(), 4, "Should be '4'");
+		test.strictEqual(this.stack.empty(), false, "Should be 'false'");
+		test.strictEqual(this.stack.search("a"), 4, "Should be '4'");
+		test.strictEqual(this.stack.search("b"), 3, "Should be '3'");
+		test.strictEqual(this.stack.search("c"), 2, "Should be '2'");
+		test.strictEqual(this.stack.search("d"), 1, "Should be '1'");
+		test.strictEqual(this.stack.search("e"), -1, "Should be '-1'");
+		this.stack.pop();
+		test.strictEqual(this.stack.search("c"), 1, "Should be '1'");
 		test.done();
 	}
 };
