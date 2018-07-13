@@ -1,7 +1,7 @@
 {
   "name": "tiny-stack",
   "description": "Tiny stack for browser or server",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "homepage": "http://avoidwork.github.io/tiny-stack",
   "author": "Jason Mulligan <jason.mulligan@avoidwork.com>",
   "repository": {
@@ -12,8 +12,9 @@
     "url": "https://github.com/avoidwork/tiny-stack/issues"
   },
   "main": "lib/tiny-stack",
+  "engineStrict": true,
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6.0.0"
   },
   "scripts": {
     "test": "grunt test"
@@ -27,7 +28,6 @@
     "grunt-cli": "^1.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-nodeunit": "^2.0.0",
-    "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^21.0.0"
   },
