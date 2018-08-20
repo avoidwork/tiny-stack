@@ -49,3 +49,7 @@ mystack.peek(); // {name: "John Doe"}
 mystack.clear();
 mystack.length(); // 0
 ```
+
+## License
+Copyright (c) 2018 Jason Mulligan
+Licensed under the BSD-3-Clause license.

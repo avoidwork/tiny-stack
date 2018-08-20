@@ -1,7 +1,7 @@
 {
   "name": "tiny-stack",
   "description": "Tiny stack for browser or server",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "http://avoidwork.github.io/tiny-stack",
   "author": "Jason Mulligan <jason.mulligan@avoidwork.com>",
   "repository": {
@@ -20,6 +20,7 @@
     "test": "grunt test"
   },
   "devDependencies": {
+    "ajv": "^6.5.3",
     "babel-core": "^6.26.3",
     "babel-minify": "^0.4.3",
     "babel-preset-env": "^1.7.0",

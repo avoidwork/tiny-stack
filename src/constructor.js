@@ -41,7 +41,7 @@
 		}
 
 		search (arg) {
-			let index = this.data.indexOf(arg);
+			const index = this.data.indexOf(arg);
 
 			return index === -1 ? -1 : this.data.length - index;
 		}
